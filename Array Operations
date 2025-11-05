@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int arr[100], n = 5, i;
+    // Initial array
+    for (i = 0; i < n; i++) arr[i] = i + 1;
+
+    // Insert 99 at position 2
+    for (i = n; i > 2; i--) arr[i] = arr[i - 1];
+    arr[2] = 99;
+    n++;
+
+    // Delete element at position 4
+    for (i = 4; i < n - 1; i++) arr[i] = arr[i + 1];
+    n--;
+
+    // Display array
+    for (i = 0; i < n; i++) printf("%d ", arr[i]);
+    return 0;
+}
